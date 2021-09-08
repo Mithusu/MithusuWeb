@@ -1,0 +1,247 @@
+/* colours */
+* {
+    --color-primary: #2b2a33;
+    --color-background: #1c1b21;
+    --color-button: #F27F2C;
+    --hover: #c76c2b;
+    --font: #fff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-background);
+    background-image: url(/src/duotoneOverlay.png);
+    background-size: 175rem;
+    margin: 0;
+    color: var(--font);
+    font-family: 'Fira Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--font);
+}
+
+#title {
+    text-transform: uppercase;
+    font-family: 'Overpass', sans-serif;
+}
+
+.siteBanner {
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: top 0.5s;
+    border-bottom: 2px solid var(--color-primary);
+    background-color: var(--color-background);
+}
+
+.iconBanner {
+    display: inline-flex;
+    height: 55px;
+    align-items: center;
+    background: url(/src/icon.png) no-repeat;
+    background-size: 3.5rem;
+    color: transparent;
+    padding-right: 8rem;
+}
+
+.navButton {
+    border: none;
+    background-color: transparent;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+    position: relative;
+    display: inline-flex;
+    text-decoration: none;
+    color: var(--color-font);
+    padding: 4px 0;
+    cursor: pointer;
+    transition: color 0.5s;
+}
+
+.navButton:hover {
+    color: #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.mainContent {
+    width: 98%;
+    max-width: 1280px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-background);
+    border: 2px solid var(--color-primary);
+    margin-left: 20rem;
+    margin-top: 10rem;
+    transition: all 0.5s;
+    animation: fadeIn 1s;
+}
+
+.social {
+    position: fixed;
+    border-radius: 50%;
+    border: none;
+    height: 80px;
+    width: 80px;
+    background-color: var(--color-button);
+    color: var(--font);
+    display: flex;
+    transition: background-color 0.5s;
+    right: 0;
+    bottom: 0;
+    margin: 1rem;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+}
+
+
+
+.closeButton:focus + .dropdownContent {
+    display: none;
+}
+
+.social:hover {
+    background-color: var(--hover);
+}
+
+.social svg {
+    width: 30px;
+    height: 30px;
+}
+
+.centered {
+    text-align: center;
+    width: 100%;
+}
+
+.titleContainer {
+    padding: 2rem;
+}
+
+#about, #blog{
+    background-color: var(--color-primary);
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+}
+
+.description {
+    width: 90%;
+    margin-bottom: 2rem;
+    display: inline-block;
+}
+
+#explore {
+    padding-bottom: 2.5rem;
+}
+
+.buttonExplore {
+    background-color: var(--color-button);
+    border: none;
+    color: var(--font);
+    border-radius: 50px;
+    height: 40px;
+    width: 150px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+#blog {
+    padding-bottom: 1rem;
+}
+
+.buttonBlog {
+    width: 200px;
+}
+
+.buttonBlog svg {
+    margin-right: 1rem;
+}
+
+.buttonExplore:hover, .buttonBlog:hover {
+    background-color: var(--hover);
+}
+
+.buttonExplore svg {
+    margin-right: 1rem;
+}
+
+#contentEx {
+    display: none;
+}
+
+.exploreContent {
+    padding-bottom: 1rem;
+    margin-top: 5.1rem;
+    width: 98%;
+    max-width: 1280px;
+    background: var(--color-background);
+    border-right: 1px solid var(--color-primary);
+    border-left: 1px solid var(--color-primary);
+    margin-left: 20rem;
+    transition: all 0.5s;
+    animation: fadeIn 1s;
+}
+
+.exploreContent, .description {
+    text-align: center;
+}
+
+.tourist {
+    display: block;
+}
+
+.tourist, #title {
+    padding-top: 1rem;
+}
+
+.tourist img {
+    border-radius: 24px;
+}
+
+.primaryArea {
+    background-color: var(--color-primary);
+    display: block;
+    padding-bottom: 1rem;
+}
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+@media screen and (max-width: 1000px) {
+
+    .mainContent {
+        margin-left: 0.5rem;
+    }
+
+    .exploreContent {
+        margin-left: 0.5rem;
+    }
+
+    .iconBanner {
+        padding-right: 1rem;
+    }
+
+    .tourist img {
+        width: 100%;
+    }
+}
